@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+
+<body>
+    <h1>**Student Details with Image**</h1>
+    <table border="3">
+        <tr>
+            <th>NAME</th>
+            <th>{{stu.name}}</th>
+        </tr>
+        <tr>
+            <th>AGE</th>
+            <th>{{stu.age}}</th>
+        </tr>
+        <tr>
+            <th>MOBILENO</th>
+            <th>{{stu.mobileno}}</th>
+        </tr>
+        <tr>
+            <th>PIC</th>
+            <th><img src="{{stu.pic.url}}" alt="Not Show" /></th>
+        </tr>
+    </table>
+</body>
+
+</html>

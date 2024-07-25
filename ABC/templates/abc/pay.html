@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+
+  <body bgcolor="cyan">
+    <form method="post">
+        {% csrf_token %}
+    <h1>Student Wise Payment Deails</h1>
+    Enter Student ID:
+    <input type="text" name="txtsid"/>
+    <button>Get Payment</button>
+    <br>
+    <br>
+    <table border="3" bgcolor="yellow">
+        <tr>
+          <th>S.No</th>
+          <th>Name</th>
+          <th>MobileNo</th>
+          <th>Amount</th>
+          <th>Mode</th>
+          <th>Payment Date</th>
+        </tr>
+        {% for pay in payments%}
+        <tr>
+          <td>{{forloop.counter}}</td>
+          <td>{{stu.name}}</td>
+          <td>{{stu.mobileno}}</td>
+          <td>{{pay.amount}}</td>
+          <td>{{pay.payment_mode}}</td>
+          <td>{{pay.payment_date}}</td>
+        </tr>
+
+        
+         {% endfor %}
+      </table>
+    </form>
+    </body>
+</html>
